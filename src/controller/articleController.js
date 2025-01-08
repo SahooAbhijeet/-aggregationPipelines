@@ -4,6 +4,7 @@ const getArticlesByTimestamp = async (req, res) => {
   try {
     const { date } = req.params;
     const result = await articleService.findArticlesByDate(date);
+    // console.log(result);
     return res.status(200).json({
       success: true,
       message: 'Successfully fetched the articles',
